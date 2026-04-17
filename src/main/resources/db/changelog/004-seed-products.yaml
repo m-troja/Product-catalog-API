@@ -1,0 +1,88 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: seed-products-smartphones
+      author: m-troja
+
+      changes:
+
+        - insert:
+            tableName: products
+            columns:
+              - column: { name: name, value: Samsung Galaxy S24 }
+              - column: { name: producer_id, valueNumeric: 1 }
+              - column:
+                  name: attributes
+                  value: >
+                    {
+                      "ram_gb": 12,
+                      "storage_gb": 256,
+                      "screen_size": 6.8,
+                      "battery_mah": 5000,
+                      "camera_mp": 200,
+                      "os": "Android"
+                    }
+
+        - insert:
+            tableName: products
+            columns:
+              - column: { name: name, value: iPhone 15 Pro }
+              - column: { name: producer_id, valueNumeric: 2 }
+              - column:
+                  name: attributes
+                  value: >
+                    {
+                      "ram_gb": 8,
+                      "storage_gb": 256,
+                      "chip": "A17 Pro",
+                      "screen_size": 6.1,
+                      "camera": "48MP",
+                      "os": "iOS"
+                    }
+        - insert:
+            tableName: products
+            columns:
+              - column: { name: name, value: Tesla Model 3 }
+              - column: { name: producer_id, valueNumeric: 3 }
+              - column:
+                  name: attributes
+                  value: >
+                    {
+                      "range_km": 580,
+                      "battery_kwh": 75,
+                      "acceleration_0_100": 3.3,
+                      "autopilot": true,
+                      "horsepower": 450
+                    }
+
+        - insert:
+            tableName: products
+            columns:
+              - column: { name: name, value: BMW X5 }
+              - column: { name: producer_id, valueNumeric: 4 }
+              - column:
+                  name: attributes
+                  value: >
+                    {
+                      "engine": "3.0L",
+                      "horsepower": 340,
+                      "fuel": "diesel",
+                      "awd": true,
+                      "seats": 5
+                    }
+
+        - insert:
+            tableName: products
+            columns:
+              - column: { name: name, value: Samsung QLED TV 65 }
+              - column: { name: producer_id, valueNumeric: 1 }
+              - column:
+                  name: attributes
+                  value: >
+                    {
+                      "size_inches": 65,
+                      "resolution": "4K",
+                      "hdr": true,
+                      "refresh_rate": 120,
+                      "smart_tv": true
+                    }

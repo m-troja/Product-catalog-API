@@ -1,0 +1,32 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: seed-producers
+      author: m-troja
+
+      changes:
+
+        - insert:
+            tableName: producers
+            columns:
+              - column: { name: name, value: Samsung }
+
+        - insert:
+            tableName: producers
+            columns:
+              - column: { name: name, value: Apple }
+
+        - insert:
+            tableName: producers
+            columns:
+              - column: { name: name, value: Tesla }
+
+        - insert:
+            tableName: producers
+            columns:
+              - column: { name: name, value: BMW }
+
+        - insert:
+            tableName: producers
+            columns:
+              - column: { name: name, value: Toyota }

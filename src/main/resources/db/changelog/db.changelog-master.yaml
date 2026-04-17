@@ -4,3 +4,9 @@ databaseChangeLog:
 
   - include:
       file: db/changelog/002-create-products.yaml
+
+  - include:
+      file: db/changelog/003-seed-producers.yaml
+
+  - include:
+     file: db/changelog/004-seed-products.yaml
