@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002
+      author: m-troja
+      changes:
+        - createTable:
+            tableName: products
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+
+              - column:
+                  name: producer_id
+                  type: BIGINT
+
+              - column:
+                  name: attributes
+                  type: JSONB
+
+        - addForeignKeyConstraint:
+            baseTableName: products
+            baseColumnNames: producer_id
+            referencedTableName: producers
+            referencedColumnNames: id
+            constraintName: fk_products_producer
