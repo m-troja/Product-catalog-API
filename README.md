@@ -1,23 +1,29 @@
-Steps to run:
+# Steps to Run
 
-1. Configure DB
+## 1. Configure the Database
 
-### DB Config
+Update the following file:
 
-src/main/application.properties:
+`src/main/resources/application.properties`
 
+```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/product_catalog
 spring.datasource.username=postgres
 spring.datasource.password=postgres
+```
 
-Default port: 8080
+## 2. Start the Application
 
-Then start application.
-Liquibase migrations execute automatically.
-Migration will seed example data.
-Product attributes are stored in JSONB to support variable product specifications & attributes.
-Swagger available at /swagger-ui.html (default: localhost:8080/swagger-ui.html)
+Run the application using your preferred method 
+
+## 3. Automatic Database Setup
+
+On startup, Liquibase migrations run automatically and will:
+
+- Create the required database schema
+- Seed example product data
 
 
- across manufacturers (from smartphones to vehicles). 
-This avoids enables horizontal scalability.
+## 4. Application Details
+- Default Port: 8080
+- Swagger UI: http://localhost:8080/swagger-ui.html
